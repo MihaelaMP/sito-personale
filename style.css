@@ -1,0 +1,307 @@
+/* Regola base per non far "uscire" il contenuto dai margini della finestra */
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9ff;
+    width: 100%; /* Impostiamo la larghezza a 100% */
+    overflow-x: hidden;
+}
+header,nav,section,footer {
+   
+    margin: auto;
+    padding: 20px;
+    width: 100%; /* Aggiungi questa proprietà per fare in modo che gli elementi si estendano su tutta la larghezza */
+    
+}
+.hero-header {
+  background-image: url('images/fiori-header.png'); /* cambia immagine se vuoi */
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.4); /* overlay scuro */
+  background-blend-mode: darken;       /* mixa overlay con l'immagine */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1,
+header p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+h1 {
+    margin: 0;
+    text-align: center;
+    
+}
+h2 {
+  background-color: #f5f1fa;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(108, 52, 131, 0.1);
+  text-align: center;
+  color: #6c3483;
+  font-weight: 600;
+  width: fit-content;
+  margin: 20px auto; /* centra il blocco */
+}
+/* cambio colore al blog */
+#blog {
+  background-color: #fff7ea;
+  padding: 2rem;
+}
+img {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+footer {
+  background-color: #f5f1fa;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+footer a {
+  color: #6c3483;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #b76dd0;
+}
+
+footer i {
+  margin-right: 8px;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+section ul li {
+    font-size: 1.2em;
+}
+nav ul {
+    list-style-type: none;   /* metto i cerchietti */
+    margin: 0;
+    padding: 0;
+    display: flex;           /* imposta il layout in riga */
+    justify-content: center; /* centra gli elementi */
+    background-color:rgb(240, 159, 240); /* colore sfondo del menu */
+  }
+  
+  nav li {
+    margin: 0 15px; /* spazio tra i link */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+   
+      }
+  
+  nav a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  article {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  article img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  .image-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Spazio tra le immagini */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Fa andare le immagini una sotto l'altra se lo schermo è stretto */
+  }
+  .image-block {
+    flex: 1 1 300px; /* permette più larghezza ma resta responsivo */ 
+    text-align: center;
+    max-width: 32%;
+  }
+  
+  .img-fissa {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .caption {
+    margin-top: 8px;
+    font-style: italic;
+    color: #555;
+    font-size: 0.95rem;
+  }
+ 
+#comp{
+    list-style-type: disc;
+}
+.img-fissa {
+  height: 450px;
+  width: 32%;/* 48 se sono 2 foto*/
+  object-fit: cover; /* Mantiene il ritaglio gradevole */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Per la navbar con sfondo che cambia */
+header.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Per animare elementi allo scroll */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stili di base */
+/* --- Stili generali nav --- */
+nav {
+  background-color: #fff;
+  padding: 10px 20px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1000;
+}
+
+/* --- Pulsante hamburger --- */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #6c3483; /* lilla/viola */
+}
+
+/* --- Lista menu --- */
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#menu li a:hover {
+  color: #b76dd0; /* tono rosa-lilla */
+}
+
+/* --- Modalità Mobile --- */
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fef9ff;
+    border: 1px solid #e0ccee;
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+    top: 55px;
+    left: 15px;
+    right: 15px;
+    box-shadow: 0 5px 10px rgba(108, 52, 131, 0.1);
+    transition: all 0.4s ease;
+  }
+
+  #menu.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}
+/*per allineare le icone*/
+#comp li i {
+  color: #6c3483;
+  margin-right: 8px;
+  font-size: 20px;
+}
+/*BUTTON*/
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  display: none;
+  z-index: 99;
+  font-size: 28px; /* aumentato */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 16px 20px; /* aumentato */
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease-in-out, transform 0.2s;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #45a049;
+  transform: scale(1.1); /* effetto ingrandimento al passaggio */
+}
+/*animazione al titolo principale quando la pagina carica*/
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-header h1 {
+  animation: fadeInUp 1s ease-out;
+}
+
+@media (max-width: 768px) {
+  .image-block {
+    max-width: 100%;
+  }
+}
+
+

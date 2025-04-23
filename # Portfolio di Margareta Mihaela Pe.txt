@@ -1,0 +1,16 @@
+# Portfolio di Margareta Mihaela Pesterau
+
+Questo è il mio portfolio dove mostro i progetti su cui sto lavorando come Data Analyst e Web Developer.
+
+## Progetti
+- [Progetto_disoccupazione_femminile](https://github.com/tuo-nome/progetto1): Breve descrizione del progetto.
+- [Progetto 2](https://github.com/tuo-nome/progetto2): work in progress.
+
+## Tecnologie utilizzate
+- Python ( librerie utilizzate:Pandas , Numpy, Matplotlib, Seaborn) 
+- HTML5, CSS3, JavaScript
+- SQL
+
+## Contatti
+- Email: margareta.mihaela.p@alice.it
+- LinkedIn: www.linkedin.com/in/margareta-mihaela-pesterau-computer-engineer
